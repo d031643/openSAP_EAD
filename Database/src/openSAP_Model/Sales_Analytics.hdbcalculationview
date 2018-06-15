@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="openSAP_Model::Sales_Analytics" applyPrivilegeType="NONE" dataCategory="CUBE" dimensionType="" schemaVersion="3.0" defaultClient="$$client$$" visibility="reportingEnabled" outputViewType="Aggregation" calculationScenarioType="TREE_BASED" cacheInvalidationPeriod="DAILY" enforceSqlExecution="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<descriptions defaultDescription="Sales Analytics"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+<DataSource id="openSAP_Model::DataSource_SalesOrderItems">
+<resourceUri>SALESORDERITEMS</resourceUri>
+</DataSource>
+<DataSource id="openSAP_Model::DataSource_BusinessPartner">
+<resourceUri>BUSINESSPARTNER</resourceUri>
+</DataSource>
+<DataSource id="openSAP_Model::DataSource_Recipe">
+<resourceUri>RECIPE</resourceUri>
+</DataSource>
+<DataSource id="openSAP_Model::DataSource_SalesOrder">
+<resourceUri>SALESORDER.active_data</resourceUri>
+</DataSource>
+</dataSources>
+<calculationViews>
+<calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="inner" partitionedExecution="false">
+<viewAttributes>
+<viewAttribute id="BUSINESSPARTNER_1.BUSINESSPARTNERID" measureType="simple">
+<descriptions defaultDescription="BusinessPartner_1.BusinessPartnerID"/>
+</viewAttribute>
+<viewAttribute id="BUSINESSPARTNER_2.BUSINESSPARTNERID" measureType="simple">
+<descriptions defaultDescription="BusinessPartner_2.BusinessPartnerID"/>
+</viewAttribute>
+<viewAttribute id="RECIPE_1.RECIPEID" measureType="simple">
+<descriptions defaultDescription="Recipe_1.RecipeID"/>
+</viewAttribute>
+<viewAttribute id="SALESORDERNUMBER" measureType="simple">
+<descriptions defaultDescription="SalesOrderNumber"/>
+</viewAttribute>
+<viewAttribute id="SALESORDER_1.ORDERID" measureType="simple">
+<descriptions defaultDescription="SalesOrder_1.OrderID"/>
+</viewAttribute>
+<viewAttribute id="SERVINGTABLE" measureType="simple">
+<descriptions defaultDescription="ServingTable"/>
+</viewAttribute>
+<viewAttribute id="JOIN$BUSINESSPARTNER_1_BUSINESSPARTNERID$BUSINESSPARTNERID" measureType="simple" hidden="true"/>
+<viewAttribute id="JOIN$RECIPE_1_RECIPEID$RECIPEID" measureType="simple" hidden="true"/>
+<viewAttribute id="JOIN$SALESORDER_1_ORDERID$ORDERID" measureType="simple" hidden="true"/>
+<viewAttribute id="LASTNAME" measureType="simple">
+<descriptions defaultDescription="LastName"/>
+</viewAttribute>
+</viewAttributes>
+<calculatedViewAttributes/>
+<restrictedViewAttributes/>
+<input node="openSAP_Model::DataSource_SalesOrderItems">
+<mapping xsi:type="Calculation:AttributeMapping" target="BUSINESSPARTNER_1.BUSINESSPARTNERID" source="BUSINESSPARTNER_1.BUSINESSPARTNERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="BUSINESSPARTNER_2.BUSINESSPARTNERID" source="BUSINESSPARTNER_2.BUSINESSPARTNERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPE_1.RECIPEID" source="RECIPE_1.RECIPEID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SALESORDERNUMBER" source="SALESORDERNUMBER"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SALESORDER_1.ORDERID" source="SALESORDER_1.ORDERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SERVINGTABLE" source="SERVINGTABLE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BUSINESSPARTNER_1_BUSINESSPARTNERID$BUSINESSPARTNERID" source="BUSINESSPARTNER_1.BUSINESSPARTNERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$RECIPE_1_RECIPEID$RECIPEID" source="RECIPE_1.RECIPEID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SALESORDER_1_ORDERID$ORDERID" source="SALESORDER_1.ORDERID"/>
+</input>
+<input node="openSAP_Model::DataSource_BusinessPartner">
+<mapping xsi:type="Calculation:AttributeMapping" target="LASTNAME" source="LASTNAME"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$BUSINESSPARTNER_1_BUSINESSPARTNERID$BUSINESSPARTNERID" source="BUSINESSPARTNERID"/>
+</input>
+<joinAttribute name="JOIN$BUSINESSPARTNER_1_BUSINESSPARTNERID$BUSINESSPARTNERID"/>
+</calculationView>
+<calculationView xsi:type="Calculation:JoinView" id="Join_2" joinType="inner" partitionedExecution="false">
+<viewAttributes>
+<viewAttribute id="BUSINESSPARTNER_1.BUSINESSPARTNERID" measureType="simple">
+<descriptions defaultDescription="BusinessPartner_1.BusinessPartnerID"/>
+</viewAttribute>
+<viewAttribute id="BUSINESSPARTNER_2.BUSINESSPARTNERID" measureType="simple">
+<descriptions defaultDescription="BusinessPartner_2.BusinessPartnerID"/>
+</viewAttribute>
+<viewAttribute id="RECIPE_1.RECIPEID" measureType="simple">
+<descriptions defaultDescription="Recipe_1.RecipeID"/>
+</viewAttribute>
+<viewAttribute id="SALESORDERNUMBER" measureType="simple">
+<descriptions defaultDescription="SalesOrderNumber"/>
+</viewAttribute>
+<viewAttribute id="SALESORDER_1.ORDERID" measureType="simple">
+<descriptions defaultDescription="SalesOrder_1.OrderID"/>
+</viewAttribute>
+<viewAttribute id="SERVINGTABLE" measureType="simple">
+<descriptions defaultDescription="ServingTable"/>
+</viewAttribute>
+<viewAttribute id="JOIN$RECIPE_1_RECIPEID$RECIPEID" measureType="simple">
+<descriptions defaultDescription="JOIN$RECIPE_1_RECIPEID$RECIPEID"/>
+</viewAttribute>
+<viewAttribute id="JOIN$SALESORDER_1_ORDERID$ORDERID" measureType="simple">
+<descriptions defaultDescription="JOIN$SALESORDER_1_ORDERID$ORDERID"/>
+</viewAttribute>
+<viewAttribute id="LASTNAME" measureType="simple">
+<descriptions defaultDescription="LastName"/>
+</viewAttribute>
+<viewAttribute id="RECIPEPRIZE.CURRENCY" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Currency"/>
+</viewAttribute>
+<viewAttribute id="RECIPEPRIZE1.CURRENCY" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Currency"/>
+</viewAttribute>
+<viewAttribute id="RECIPEPRIZE1.VALUE" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Value"/>
+</viewAttribute>
+<viewAttribute id="RECIPEPRIZE.VALUE" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Value"/>
+</viewAttribute>
+</viewAttributes>
+<calculatedViewAttributes/>
+<restrictedViewAttributes/>
+<input node="Join_1">
+<mapping xsi:type="Calculation:AttributeMapping" target="BUSINESSPARTNER_1.BUSINESSPARTNERID" source="BUSINESSPARTNER_1.BUSINESSPARTNERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="BUSINESSPARTNER_2.BUSINESSPARTNERID" source="BUSINESSPARTNER_2.BUSINESSPARTNERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPE_1.RECIPEID" source="RECIPE_1.RECIPEID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SALESORDERNUMBER" source="SALESORDERNUMBER"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SALESORDER_1.ORDERID" source="SALESORDER_1.ORDERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SERVINGTABLE" source="SERVINGTABLE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$RECIPE_1_RECIPEID$RECIPEID" source="JOIN$RECIPE_1_RECIPEID$RECIPEID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SALESORDER_1_ORDERID$ORDERID" source="JOIN$SALESORDER_1_ORDERID$ORDERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="LASTNAME" source="LASTNAME"/>
+</input>
+<input node="openSAP_Model::DataSource_Recipe">
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPEPRIZE.CURRENCY" source="RECIPEPRIZE.CURRENCY"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPEPRIZE1.CURRENCY" source="RECIPEPRIZE1.CURRENCY"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPEPRIZE1.VALUE" source="RECIPEPRIZE1.VALUE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPEPRIZE.VALUE" source="RECIPEPRIZE.VALUE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$RECIPE_1_RECIPEID$RECIPEID" source="RECIPEID"/>
+</input>
+<joinAttribute name="JOIN$RECIPE_1_RECIPEID$RECIPEID"/>
+</calculationView>
+<calculationView xsi:type="Calculation:JoinView" id="Join_3" joinType="inner" partitionedExecution="false">
+<viewAttributes>
+<viewAttribute id="BUSINESSPARTNER_1.BUSINESSPARTNERID" measureType="simple">
+<descriptions defaultDescription="BusinessPartner_1.BusinessPartnerID"/>
+</viewAttribute>
+<viewAttribute id="BUSINESSPARTNER_2.BUSINESSPARTNERID" measureType="simple">
+<descriptions defaultDescription="BusinessPartner_2.BusinessPartnerID"/>
+</viewAttribute>
+<viewAttribute id="RECIPE_1.RECIPEID" measureType="simple">
+<descriptions defaultDescription="Recipe_1.RecipeID"/>
+</viewAttribute>
+<viewAttribute id="SALESORDERNUMBER" measureType="simple">
+<descriptions defaultDescription="SalesOrderNumber"/>
+</viewAttribute>
+<viewAttribute id="SALESORDER_1.ORDERID" measureType="simple">
+<descriptions defaultDescription="SalesOrder_1.OrderID"/>
+</viewAttribute>
+<viewAttribute id="SERVINGTABLE" measureType="simple">
+<descriptions defaultDescription="ServingTable"/>
+</viewAttribute>
+<viewAttribute id="JOIN$SALESORDER_1_ORDERID$ORDERID" measureType="simple">
+<descriptions defaultDescription="JOIN$SALESORDER_1_ORDERID$ORDERID"/>
+</viewAttribute>
+<viewAttribute id="LASTNAME" measureType="simple">
+<descriptions defaultDescription="LastName"/>
+</viewAttribute>
+<viewAttribute id="RECIPEPRIZE.CURRENCY" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Currency"/>
+</viewAttribute>
+<viewAttribute id="RECIPEPRIZE1.CURRENCY" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Currency"/>
+</viewAttribute>
+<viewAttribute id="RECIPEPRIZE1.VALUE" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Value"/>
+</viewAttribute>
+<viewAttribute id="RECIPEPRIZE.VALUE" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Value"/>
+</viewAttribute>
+<viewAttribute id="ORDERDATE" measureType="simple">
+<descriptions defaultDescription="OrderDate"/>
+</viewAttribute>
+<viewAttribute id="ORDERPAYMENTMTHOD" measureType="simple">
+<descriptions defaultDescription="OrderPaymentMthod"/>
+</viewAttribute>
+<viewAttribute id="ORDERSTATUS" measureType="simple">
+<descriptions defaultDescription="OrderStatus"/>
+</viewAttribute>
+<viewAttribute id="ORDERTOTALAMOUNT.CURRENCY" measureType="simple">
+<descriptions defaultDescription="OrdertotalAmount.Currency"/>
+</viewAttribute>
+<viewAttribute id="ORDERTOTALAMOUNT.VALUE" measureType="simple">
+<descriptions defaultDescription="OrdertotalAmount.Value"/>
+</viewAttribute>
+<viewAttribute id="ORDERTOTALTAX.CURRENCY" measureType="simple">
+<descriptions defaultDescription="OrderTotalTax.Currency"/>
+</viewAttribute>
+<viewAttribute id="ORDERTOTALTAX.VALUE" measureType="simple">
+<descriptions defaultDescription="OrderTotalTax.Value"/>
+</viewAttribute>
+</viewAttributes>
+<calculatedViewAttributes/>
+<restrictedViewAttributes/>
+<input node="Join_2">
+<mapping xsi:type="Calculation:AttributeMapping" target="BUSINESSPARTNER_1.BUSINESSPARTNERID" source="BUSINESSPARTNER_1.BUSINESSPARTNERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="BUSINESSPARTNER_2.BUSINESSPARTNERID" source="BUSINESSPARTNER_2.BUSINESSPARTNERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPE_1.RECIPEID" source="RECIPE_1.RECIPEID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SALESORDERNUMBER" source="SALESORDERNUMBER"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SALESORDER_1.ORDERID" source="SALESORDER_1.ORDERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="SERVINGTABLE" source="SERVINGTABLE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SALESORDER_1_ORDERID$ORDERID" source="JOIN$SALESORDER_1_ORDERID$ORDERID"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="LASTNAME" source="LASTNAME"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPEPRIZE.CURRENCY" source="RECIPEPRIZE.CURRENCY"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPEPRIZE1.CURRENCY" source="RECIPEPRIZE1.CURRENCY"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPEPRIZE1.VALUE" source="RECIPEPRIZE1.VALUE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="RECIPEPRIZE.VALUE" source="RECIPEPRIZE.VALUE"/>
+</input>
+<input node="openSAP_Model::DataSource_SalesOrder">
+<mapping xsi:type="Calculation:AttributeMapping" target="ORDERDATE" source="ORDERDATE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="ORDERPAYMENTMTHOD" source="ORDERPAYMENTMTHOD"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="ORDERSTATUS" source="ORDERSTATUS"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="ORDERTOTALAMOUNT.CURRENCY" source="ORDERTOTALAMOUNT.CURRENCY"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="ORDERTOTALAMOUNT.VALUE" source="ORDERTOTALAMOUNT.VALUE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="ORDERTOTALTAX.CURRENCY" source="ORDERTOTALTAX.CURRENCY"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="ORDERTOTALTAX.VALUE" source="ORDERTOTALTAX.VALUE"/>
+<mapping xsi:type="Calculation:AttributeMapping" target="JOIN$SALESORDER_1_ORDERID$ORDERID" source="ORDERID"/>
+</input>
+<joinAttribute name="JOIN$SALESORDER_1_ORDERID$ORDERID"/>
+</calculationView>
+</calculationViews>
+<logicalModel id="Join_3">
+<attributes>
+<attribute id="SALESORDERNUMBER" order="1" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="SalesOrderNumber"/>
+<keyMapping columnObjectName="Join_3" columnName="SALESORDERNUMBER"/>
+</attribute>
+<attribute id="SERVINGTABLE" order="2" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="ServingTable"/>
+<keyMapping columnObjectName="Join_3" columnName="SERVINGTABLE"/>
+</attribute>
+<attribute id="BUSINESSPARTNER_1.BUSINESSPARTNERID" order="3" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="BusinessPartner_1.BusinessPartnerID"/>
+<keyMapping columnObjectName="Join_3" columnName="BUSINESSPARTNER_1.BUSINESSPARTNERID"/>
+</attribute>
+<attribute id="BUSINESSPARTNER_2.BUSINESSPARTNERID" order="4" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="BusinessPartner_2.BusinessPartnerID"/>
+<keyMapping columnObjectName="Join_3" columnName="BUSINESSPARTNER_2.BUSINESSPARTNERID"/>
+</attribute>
+<attribute id="SALESORDER_1.ORDERID" order="5" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="SalesOrder_1.OrderID"/>
+<keyMapping columnObjectName="Join_3" columnName="SALESORDER_1.ORDERID"/>
+</attribute>
+<attribute id="RECIPE_1.RECIPEID" order="6" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="Recipe_1.RecipeID"/>
+<keyMapping columnObjectName="Join_3" columnName="RECIPE_1.RECIPEID"/>
+</attribute>
+<attribute id="LASTNAME" order="7" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="LastName"/>
+<keyMapping columnObjectName="Join_3" columnName="LASTNAME"/>
+</attribute>
+<attribute id="RECIPEPRIZE.CURRENCY" order="10" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="RecipePrize.Currency"/>
+<keyMapping columnObjectName="Join_3" columnName="RECIPEPRIZE.CURRENCY"/>
+</attribute>
+<attribute id="RECIPEPRIZE1.CURRENCY" order="11" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="RecipePrize.Currency"/>
+<keyMapping columnObjectName="Join_3" columnName="RECIPEPRIZE1.CURRENCY"/>
+</attribute>
+<attribute id="ORDERTOTALAMOUNT.CURRENCY" order="12" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="OrdertotalAmount.Currency"/>
+<keyMapping columnObjectName="Join_3" columnName="ORDERTOTALAMOUNT.CURRENCY"/>
+</attribute>
+<attribute id="ORDERTOTALTAX.CURRENCY" order="14" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="OrderTotalTax.Currency"/>
+<keyMapping columnObjectName="Join_3" columnName="ORDERTOTALTAX.CURRENCY"/>
+</attribute>
+<attribute id="ORDERDATE" order="16" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="OrderDate"/>
+<keyMapping columnObjectName="Join_3" columnName="ORDERDATE"/>
+</attribute>
+<attribute id="ORDERPAYMENTMTHOD" order="17" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="OrderPaymentMthod"/>
+<keyMapping columnObjectName="Join_3" columnName="ORDERPAYMENTMTHOD"/>
+</attribute>
+<attribute id="ORDERSTATUS" order="18" attributeHierarchyActive="false" displayAttribute="false">
+<descriptions defaultDescription="OrderStatus"/>
+<keyMapping columnObjectName="Join_3" columnName="ORDERSTATUS"/>
+</attribute>
+</attributes>
+<calculatedAttributes/>
+<baseMeasures>
+<measure id="RECIPEPRIZE1.VALUE" order="8" aggregationType="sum" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Value"/>
+<measureMapping columnObjectName="Join_3" columnName="RECIPEPRIZE1.VALUE"/>
+</measure>
+<measure id="RECIPEPRIZE.VALUE" order="9" aggregationType="sum" measureType="simple">
+<descriptions defaultDescription="RecipePrize.Value"/>
+<measureMapping columnObjectName="Join_3" columnName="RECIPEPRIZE.VALUE"/>
+</measure>
+<measure id="ORDERTOTALAMOUNT.VALUE" order="13" aggregationType="sum" measureType="simple">
+<descriptions defaultDescription="OrdertotalAmount.Value"/>
+<measureMapping columnObjectName="Join_3" columnName="ORDERTOTALAMOUNT.VALUE"/>
+</measure>
+<measure id="ORDERTOTALTAX.VALUE" order="15" aggregationType="sum" measureType="simple">
+<descriptions defaultDescription="OrderTotalTax.Value"/>
+<measureMapping columnObjectName="Join_3" columnName="ORDERTOTALTAX.VALUE"/>
+</measure>
+</baseMeasures>
+<calculatedMeasures/>
+<restrictedMeasures/>
+<localDimensions/>
+</logicalModel>
+<layout>
+<shapes>
+<shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+<upperLeftCorner x="40" y="85"/>
+</shape>
+<shape expanded="true" modelObjectName="Join_3" modelObjectNameSpace="CalculationView">
+<upperLeftCorner x="100" y="230"/>
+<rectangleSize height="30" width="140"/>
+</shape>
+<shape modelObjectName="Join_2" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+<upperLeftCorner x="20" y="30"/>
+<rectangleSize width="250"/>
+</shape>
+<shape modelObjectName="openSAP_Model::DataSource_SalesOrder" modelObjectNameSpace="Join_3" modelObjectType="JoinNodeInput">
+<upperLeftCorner x="320" y="30"/>
+<rectangleSize width="250"/>
+</shape>
+<shape expanded="true" modelObjectName="Join_2" modelObjectNameSpace="CalculationView">
+<upperLeftCorner x="100" y="330"/>
+<rectangleSize height="30" width="140"/>
+</shape>
+<shape modelObjectName="Join_1" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+<upperLeftCorner x="20" y="30"/>
+<rectangleSize width="250"/>
+</shape>
+<shape modelObjectName="openSAP_Model::DataSource_Recipe" modelObjectNameSpace="Join_2" modelObjectType="JoinNodeInput">
+<upperLeftCorner x="320" y="30"/>
+<rectangleSize width="250"/>
+</shape>
+<shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+<upperLeftCorner x="100" y="430"/>
+<rectangleSize height="30" width="140"/>
+</shape>
+<shape modelObjectName="openSAP_Model::DataSource_SalesOrderItems" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+<upperLeftCorner x="20" y="30"/>
+<rectangleSize width="250"/>
+</shape>
+<shape modelObjectName="openSAP_Model::DataSource_BusinessPartner" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+<upperLeftCorner x="320" y="30"/>
+<rectangleSize width="250"/>
+</shape>
+</shapes>
+</layout>
+</Calculation:scenario>

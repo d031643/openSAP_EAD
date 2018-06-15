@@ -1,0 +1,16 @@
+namespace "openSAP_Model";
+using BUSINESSPARTNER;
+using SALESORDER;
+using RECIPE;
+
+entity "SALESORDERITEMS" {
+   key "SALESORDERNUMBER" : Integer not null;
+   "SERVINGTABLE"         : Integer;
+   "BUSINESSPARTNER_1"    : association to "BUSINESSPARTNER";
+   "BUSINESSPARTNER_2"    : association to "BUSINESSPARTNER";
+   "SALESORDER_1"         : association to "SALESORDER".active_data;
+   "RECIPE_1"             : association to "RECIPE";
+}
+technical configuration {
+   column store;
+};

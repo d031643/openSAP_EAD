@@ -1,0 +1,11 @@
+namespace "openSAP_Model";
+using Types;
+
+entity "UNIT" {
+   key "UNITID"    : "Types"."IDENTIFIER" not null;
+   "UNITNAME"      : "Types"."DESCRIPTION";
+   "UNIT_IN_GRAMM" : "Types"."COOKINGAMOUNT";
+}
+technical configuration {
+   column store;
+};

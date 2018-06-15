@@ -1,0 +1,88 @@
+_schema-version: '2.0'
+ID: openSAP_EAD
+description: openSAP_EAD
+version: 0.0.1
+
+modules:
+ - name:  openSAP_EAD-DWF
+   type: dwf
+#   parameters:
+#      app-name: openSAP_EAD-DWF
+   path: DWF
+   requires:
+#      - name: openSAP_EAD-uaa
+      - name: openSAP_EAD-dws
+   properties:
+     memory: 256M
+
+ - name: openSAP_EAD-Backend
+   type: nodejs
+#   parameters:
+#      app-name: openSAP_EAD-Backend
+   path: Backend
+   requires:
+#      - name: openSAP_EAD-uaa
+      - name: openSAP_EAD-container
+      - name: openSAP_EAD-dws
+   properties:
+     memory: 512M
+     API_END_POINT: "${xs-api-url}"
+#     SAP_JWT_TRUST_ACL: "[{\"clientid\":\"*\",\"identityzone\":\"*\"}]"
+   provides:
+    - name:  openSAP_EAD-Backend
+      properties:
+       service_url: ${default-url}
+
+ - name: openSAP_EAD-Database
+   type: hdb
+#   parameters:
+#      app-name: openSAP_EAD-Database
+   path: Database
+   requires:
+    - name: openSAP_EAD-container
+   properties:
+     memory: 256M
+     HDI_DEPLOY_OPTIONS: { "auto_undeploy": true }
+
+resources:
+# - name: openSAP_EAD-uaa
+#   type: com.sap.xs.uaa
+#   parameters:
+#     service-name: openSAP_EAD-uaa
+#     service-plan: space
+#     config:
+#         xsappname: openSAP_EAD
+#         scopes:
+#          - name: $XSAPPNAME.TOE
+#            description: access for TOE
+#            grant-as-authority-to-apps:
+#             - dwf-toe
+#             - dwf-runtime
+#            granted-apps:
+#             - dwf-toe
+#             - dwf-runtime
+#         authorities:
+#          - $ACCEPT_GRANTED_AUTHORITIES
+#         role-templates:
+#           - name: User
+#             description: Access API
+#             scope-references:
+#              - $XSAPPNAME.TOE
+
+ - name: openSAP_EAD-dws
+   properties:
+      dwf-edw-client-name: ${service-name}
+#      dwf-edw-client-name: openSAP_EAD-dws
+#   parameters:
+#      service-name: openSAP_EAD-dws
+   type: com.sap.xs.dwf-edw-client
+ - name: openSAP_EAD-container
+   properties:
+      hdi-container-name: ${service-name}
+#      hdi-container-name: openSAP_EAD-container
+#   parameters:
+#      service-name: openSAP_EAD-container
+   type: com.sap.xs.hdi-container
+   parameters:
+     service-keys:
+     - name: dwf-monitor

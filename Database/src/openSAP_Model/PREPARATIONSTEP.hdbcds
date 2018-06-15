@@ -1,0 +1,13 @@
+namespace "openSAP_Model";
+using Types;
+using RECIPE;
+
+entity "PREPARATIONSTEP" {
+   key "PREPARATIONSTEPNUMBER" : "Types"."IDENTIFIER" not null;
+   "INSTRUCTIONS"              : "Types"."LARGETEXT";
+   "PREPSTEPNAME"              : "Types"."DESCRIPTION";
+   "RECIPE_1"                  : association to "RECIPE";
+}
+technical configuration {
+   column store;
+};
