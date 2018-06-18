@@ -1,0 +1,15 @@
+namespace "openSAP_Stage";
+using Types;
+using INGREDIENCE;
+
+entity "NUTRITIONFACTS" {
+   key "VALIDFROM"     : LocalDate not null;
+   "VALIDTO"           : LocalDate;
+   "CALORIES"          : "Types"."COOKINGAMOUNT";
+   "SUGAR"             : "Types"."COOKINGAMOUNT";
+   "FAT"               : "Types"."COOKINGAMOUNT";
+   key "INGREDIENCE_1" : association to "INGREDIENCE" not null;
+}
+technical configuration {
+   column store;
+};

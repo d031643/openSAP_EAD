@@ -1,0 +1,15 @@
+namespace "openSAP_Stage";
+using Types;
+
+entity "BUSINESSPARTNER" {
+   key "BUSINESSPARTNERID" : "Types"."IDENTIFIER" not null;
+   "FIRSTNAME"             : "Types"."DESCRIPTION";
+   "MIDDLENAME"            : "Types"."DESCRIPTION";
+   "LASTNAME"              : "Types"."DESCRIPTION";
+   "BUSINESSPARTNERTYPE"   : "Types"."BUSINESPARTNERTYPEDOMAIN";
+   "GROUPNAME"             : "Types"."DESCRIPTION";
+   "COMPANYNAME"           : "Types"."DESCRIPTION";
+}
+technical configuration {
+   column store;
+};

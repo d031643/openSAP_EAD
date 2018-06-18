@@ -1,0 +1,24 @@
+namespace "openSAP_Stage";
+/*===============================================
+   Context: Types
+===============================================*/
+context "Types" {
+   type "BUSINESPARTNERTYPEDOMAIN" : String(1);
+   type "COOKINGAMOUNT" : Decimal(10, 4);
+   type "DESCRIPTION" : String(60);
+   type "IDENTIFIER" : Integer64;
+   type "LARGETEXT" : String(2048);
+   type "MONEYAMOUT" : Decimal(22, 4);
+   type "ADDRESS" {
+      "STREET1"     : "DESCRIPTION";
+      "HOUSENUMBER" : Decimal(22, 4);
+      "CITY"        : String(60);
+      "REGION"      : String(60);
+      "COUNTRY"     : String(60);
+      "ZIP"         : String(7);
+   };
+   type "AMOUNT" {
+      "CURRENCY" : String(60);
+      "VALUE"    : Decimal(22, 4);
+   };
+};

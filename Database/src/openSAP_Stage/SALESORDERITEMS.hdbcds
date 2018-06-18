@@ -1,0 +1,22 @@
+namespace "openSAP_Stage";
+
+using BUSINESSPARTNER;
+using SALESORDER;
+using RECIPE; 
+/* using openSAP_Stage :: SALESORDER as SALESORDER_1;
+using openSAP_Stage :: RECIPE as RECIPE_1;
+using openSAP_Stage :: BUSINESSPARTNER as BUSINESSPARTNER_1;
+using openSAP_Stage :: BUSINESSPARTNER as BUSINESSPARTNER_2; */
+
+entity "SALESORDERITEMS" {
+    key "SALESORDERNUMBER"  : Integer not null;
+        "SERVINGTABLE"      : Integer;
+        "BUSINESSPARTNER_1" : association to "BUSINESSPARTNER";
+        "BUSINESSPARTNER_2" : association to "BUSINESSPARTNER";
+        /* "SALESORDER_1"      : association to "SALESORDER"; */
+        "SALESORDER_1"      : Integer64;
+        "RECIPE_1"          : association to "RECIPE";
+}
+technical configuration {
+    column store;
+};

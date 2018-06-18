@@ -1,0 +1,12 @@
+namespace "openSAP_Stage";
+using Types;
+
+entity "RECIPE" {
+   key "RECIPEID" : "Types"."IDENTIFIER" not null;
+   "RECIPENAME"   : "Types"."DESCRIPTION";
+   "RECIPEPRIZE1" : "Types"."AMOUNT";
+   "RECIPEPRIZE"  : "Types"."AMOUNT";
+}
+technical configuration {
+   column store;
+};

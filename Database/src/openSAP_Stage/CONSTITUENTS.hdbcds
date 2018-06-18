@@ -1,0 +1,12 @@
+namespace "openSAP_Stage";
+using INGREDIENCE;
+using PREPARATIONSTEP;
+
+entity "CONSTITUENTS" {
+   "COUNT"                 : Decimal(22, 4);
+   key "INGREDIENCE_1"     : association to "INGREDIENCE" not null;
+   key "PREPARATIONSTEP_1" : association to "PREPARATIONSTEP" not null;
+}
+technical configuration {
+   column store;
+};

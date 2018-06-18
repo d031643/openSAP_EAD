@@ -1,0 +1,14 @@
+namespace "openSAP_Stage";
+using Types;
+
+entity "SALESORDER" {
+   key "ORDERID"       : Integer64; 
+   "ORDERDATE"         : UTCDateTime;
+   "ORDERPAYMENTMTHOD" : String(1);
+   "ORDERSTATUS"       : String(1);
+   "ORDERTOTALAMOUNT"  : "Types"."AMOUNT";
+   "ORDERTOTALTAX"     : "Types"."AMOUNT";
+}
+technical configuration {
+   column store;
+};

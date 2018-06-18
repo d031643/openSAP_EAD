@@ -1,2 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<flowgraph:ContainerNode xmi:id='732075f86a05450daedd3ecd91281f5f' xmlns:xmi='http://www.omg.org/XMI' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:flowgraph='http://www.sap.com/ndb/flowgraph/1.0' xmi:version='2.0' name='OPENSAP_DMM' runtimeBehavior='BATCH_TASK'><annotations xmi:id='5ea1fd8599a9423dba66ab125d2b76c6' key='sap.afm.nodeType' value='ContainerNode'/><nodes xmi:id='840feafe24ba4bf1b14bb81333fc1985' name='DATA_PROJECTION_1' xsi:type='flowgraph:FilterNode'><inputs xmi:id='8dbc5adc7f5e4ee0ba0cd558667d79de' name='DATA_PROJECTION_1_IN'><attributes xmi:id='c3c1e2a9d3574724ac6cc4d4b3045dbd' name='SALESORDERNUMBER' type='INTEGER' nullable='false'><annotations xmi:id='99ed0f167cb6478db435925d766c6d25' key='sap.im.primaryKey' value='true'/></attributes><attributes xmi:id='64979ebe212c4918a232acd2282fb408' name='SERVINGTABLE' type='INTEGER' nullable='true'></attributes><attributes xmi:id='4b32e00a7dd74a3d99c57dbb6ffa0a6c' name='BUSINESSPARTNER_1' type='&lt;Undefined&gt;' nullable='true'></attributes><attributes xmi:id='ef61f72ee9b740ceabeb912c1871780a' name='BUSINESSPARTNER_2' type='&lt;Undefined&gt;' nullable='true'></attributes><attributes xmi:id='4bd284b503734ba081d4c98d1c35bb52' name='SALESORDER_1' type='&lt;Undefined&gt;' nullable='true'></attributes><attributes xmi:id='e842e525fdc44b3fb0d991f15d1d1325' name='RECIPE_1' type='&lt;Undefined&gt;' nullable='true'></attributes></inputs><outputs xmi:id='ca8eaa789906400cad2063c3138cbecc' name='DATA_PROJECTION_1_OUT'><attributes xmi:id='4a8ba41e290f45fa9910635c2e519174' name='SALESORDERNUMBER' type='INTEGER' nullable='false' expression='&quot;SALESORDERNUMBER&quot;'><annotations xmi:id='50d649f95f404a5695a46ede089dc1f9' key='sap.im.primaryKey' value='true'/></attributes><attributes xmi:id='c4a6b88a11d6460ca2744a2ddf42b9e4' name='SERVINGTABLE' type='INTEGER' nullable='true' expression='&quot;SERVINGTABLE&quot;'></attributes><attributes xmi:id='40950e5a249840ee85084fbe30c153b1' name='BUSINESSPARTNER_1' type='&lt;Undefined&gt;' nullable='true' expression='&quot;BUSINESSPARTNER_1&quot;'></attributes><attributes xmi:id='4c385877cfa74a8386b896ea93d18769' name='BUSINESSPARTNER_2' type='&lt;Undefined&gt;' nullable='true' expression='&quot;BUSINESSPARTNER_2&quot;'></attributes><attributes xmi:id='62ff482349804c208ca2b19988f3ed0e' name='SALESORDER_1' type='&lt;Undefined&gt;' nullable='true' expression='&quot;SALESORDER_1&quot;'></attributes><attributes xmi:id='9570fb7151874538bc86c00ff49cf580' name='RECIPE_1' type='&lt;Undefined&gt;' nullable='true' expression='&quot;RECIPE_1&quot;'></attributes></outputs><annotations xmi:id='5071c90bcbae424eae1545c2f5df147d' key='sap.afm.layout'><annotations xmi:id='7b319c7055d245898aea4a3672a7b56b' key='x' value='578'></annotations><annotations xmi:id='f003f2e255de421a881980b78d193461' key='y' value='-625'></annotations><annotations xmi:id='de19237945c849258b3e1774e5d65468' key='width' value='120'></annotations><annotations xmi:id='9d808604905046e3b379c77ac0cdf66b' key='height' value='115'></annotations></annotations></nodes><nodes xmi:id='d539ee0943524fe283e5fbd605df72b6' name='SALESORDERITEMS' catalogObjectName='SALESORDERITEMS' type='DATABASE_TABLE' xsi:type='flowgraph:DataNode' dataLayout='COLUMN'><annotations xmi:id='dac553538bb14d8ebc3cf5437f074842' key='sap.afm.nodeType' value='DataNode'></annotations><annotations xmi:id='0f00c1f33eae4b3f85402c4e6aaa171d' key='sap.afm.displayName' value='Data Target'></annotations><annotations xmi:id='bb1704c47ccd4b5cb901566d1f0c3ac3' key='sap.afm.layout'><annotations xmi:id='7eb4d1b3520d42f7b229f0c6b9dd98a8' key='x' value='912'></annotations><annotations xmi:id='cf34b5ae65eb4d04a182335770bbc4be' key='y' value='-625'></annotations><annotations xmi:id='3c9379cdb2de4961974b4234ab3834a6' key='width' value='120'></annotations><annotations xmi:id='ef774b8478114c54b055c64ae1a45187' key='height' value='115'></annotations></annotations><inputs xmi:id='4ad38e0656534bba81866f921027a1e9' name='SALESORDERITEMS_IN'><attributes xmi:id='368eacbfd59a427b8d391d196fc959f4' name='SALESORDERNUMBER' type='INTEGER' nullable='false'><annotations xmi:id='5b96140bf3a048ef820139a08ce91f3b' key='sap.im.primaryKey' value='true'/></attributes><attributes xmi:id='772cfaeaea124e93a09befbf11132865' name='SERVINGTABLE' type='INTEGER' nullable='true'></attributes><attributes xmi:id='44dd5d5ed5a54e798681d15f8f675ba9' name='BUSINESSPARTNER_1' type='&lt;Undefined&gt;' nullable='true'></attributes><attributes xmi:id='6bd8d727f02d4925b9ec1cb5d4e99001' name='BUSINESSPARTNER_2' type='&lt;Undefined&gt;' nullable='true'></attributes><attributes xmi:id='1901d6cafe804bf9918bdc0c56373cac' name='SALESORDER_1' type='&lt;Undefined&gt;' nullable='true'></attributes><attributes xmi:id='34cf45fd7dd341b48e82fe1efee8dab1' name='RECIPE_1' type='&lt;Undefined&gt;' nullable='true'></attributes></inputs></nodes><tableMappings xmi:id='905b55d4191246d49c315a19d3b6efe4' source='ca8eaa789906400cad2063c3138cbecc' target='4ad38e0656534bba81866f921027a1e9'><attributeMappings xmi:id='b7e99c4c87e04478994af5bafd4e9aa8' source='4a8ba41e290f45fa9910635c2e519174' target='368eacbfd59a427b8d391d196fc959f4'></attributeMappings><attributeMappings xmi:id='2ec702a3ce2740f28d55018a973398c4' source='c4a6b88a11d6460ca2744a2ddf42b9e4' target='772cfaeaea124e93a09befbf11132865'></attributeMappings><attributeMappings xmi:id='1f375e6c8805417fbae488bf5ba83301' source='40950e5a249840ee85084fbe30c153b1' target='44dd5d5ed5a54e798681d15f8f675ba9'></attributeMappings><attributeMappings xmi:id='87303314ff1f4741bcbeb839bbc01a36' source='4c385877cfa74a8386b896ea93d18769' target='6bd8d727f02d4925b9ec1cb5d4e99001'></attributeMappings><attributeMappings xmi:id='b0bf7fceb4ed4425a097e501d06c3281' source='62ff482349804c208ca2b19988f3ed0e' target='1901d6cafe804bf9918bdc0c56373cac'></attributeMappings><attributeMappings xmi:id='3fe7f4bae1324b28b39d0ca3209f45cc' source='9570fb7151874538bc86c00ff49cf580' target='34cf45fd7dd341b48e82fe1efee8dab1'></attributeMappings></tableMappings></flowgraph:ContainerNode>
+<flowgraph:ContainerNode xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:flowgraph="http://www.sap.com/ndb/flowgraph/1.0" xmi:id="732075f86a05450daedd3ecd91281f5f" xmi:version="2.0" name="OpenSAP_DMM" runtimeBehavior="BATCH_TASK">
+  <annotations xmi:id="5ea1fd8599a9423dba66ab125d2b76c6" key="sap.afm.nodeType" value="ContainerNode"/>
+  <nodes xmi:id="840feafe24ba4bf1b14bb81333fc1985" name="DATA_PROJECTION_1" xsi:type="flowgraph:FilterNode">
+    <inputs xmi:id="8dbc5adc7f5e4ee0ba0cd558667d79de" name="DATA_PROJECTION_1_IN">
+      <attributes xmi:id="c3c1e2a9d3574724ac6cc4d4b3045dbd" name="SALESORDERNUMBER" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="99ed0f167cb6478db435925d766c6d25" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="64979ebe212c4918a232acd2282fb408" name="SERVINGTABLE" type="INTEGER" nullable="true" length="10">
+        <annotations xmi:id="6d4d8e1a3ee9c465a14a80c164596a29" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="4bd284b503734ba081d4c98d1c35bb52" name="SALESORDER_1" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="48c62ff0995b50fbcc3b313fefc2e082" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="2809286fb2dee0530413e0033813ae8e" name="BUSINESSPARTNER_1.BUSINESSPARTNERID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="deb3eddf3a2b7c6a1b282c080c82b81a" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="dfb6cad6628713d9435e8ec5597b09fa" name="BUSINESSPARTNER_2.BUSINESSPARTNERID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="df96439dfe89ee441ad97edf51231efa" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="052fbbe56289d4b23f8b9c2857d7f619" name="RECIPE_1.RECIPEID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="45a2b4acff78bf795166696c79ae41a0" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+    <outputs xmi:id="ca8eaa789906400cad2063c3138cbecc" name="DATA_PROJECTION_1_OUT">
+      <attributes xmi:id="4a8ba41e290f45fa9910635c2e519174" name="SALESORDERNUMBER" type="INTEGER" nullable="false" expression="&quot;SALESORDERNUMBER&quot;" length="10">
+        <annotations xmi:id="50d649f95f404a5695a46ede089dc1f9" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="c4a6b88a11d6460ca2744a2ddf42b9e4" name="SERVINGTABLE" type="INTEGER" nullable="true" expression="&quot;SERVINGTABLE&quot;" length="10">
+        <annotations xmi:id="2e11c3413cee455008e34258379574b6" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="7d64d25ab18ffefc9f9320e2c9356170" name="BUSINESSPARTNER_1.BUSINESSPARTNERID" type="BIGINT" nullable="true" expression="&quot;BUSINESSPARTNER_1.BUSINESSPARTNERID&quot;" length="19">
+        <annotations xmi:id="4de9f3176332acd24efc645dbed9fbfe" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="5bbf1e392526312d58fd94414b20bbd2" name="BUSINESSPARTNER_2.BUSINESSPARTNERID" type="BIGINT" nullable="true" expression="&quot;BUSINESSPARTNER_2.BUSINESSPARTNERID&quot;" length="19">
+        <annotations xmi:id="ebbfcf5422d4469f243343f3ba5a742a" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="5ddde461e99a56bef38276c5dddfc696" name="RECIPE_1.RECIPEID" type="BIGINT" nullable="true" expression="&quot;RECIPE_1.RECIPEID&quot;" length="19">
+        <annotations xmi:id="14671d0f156eeb6258b0d6914d370150" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="b9c0afb4c2fdc7729ef9b3c88d63013f" name="SALESORDER" type="BIGINT" nullable="true" expression="&quot;DATA_PROJECTION_1_OUT&quot;.&quot;SALESORDER&quot;">
+      </attributes>
+    </outputs>
+    <annotations xmi:id="5071c90bcbae424eae1545c2f5df147d" key="sap.afm.layout">
+      <annotations xmi:id="7b319c7055d245898aea4a3672a7b56b" key="x" value="578">
+      </annotations>
+      <annotations xmi:id="f003f2e255de421a881980b78d193461" key="y" value="-625">
+      </annotations>
+      <annotations xmi:id="de19237945c849258b3e1774e5d65468" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="9d808604905046e3b379c77ac0cdf66b" key="height" value="115">
+      </annotations>
+    </annotations>
+  </nodes>
+  <nodes xmi:id="09e9f2a0e2e3d1b363f4a30472139e62" name="DataSource" catalogObjectName="openSAP_Stage::SALESORDERITEMS" type="DATABASE_TABLE" xsi:type="flowgraph:DataNode" dataLayout="COLUMN">
+    <annotations key="sap.afm.layout" xmi:id="d2233d1269d4d259b43e8fc5af997e62">
+      <annotations xmi:id="cc6dafa4b2fc71916d98516189c61dcf" key="x" value="5">
+      </annotations>
+      <annotations xmi:id="18a490e54440b9bd643bc00cbb470215" key="y" value="-571">
+      </annotations>
+      <annotations xmi:id="c73af6ea81b8436027ebb2dac32fd2e8" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="4f3f6e177320a62d9f3eadb81ad9e45f" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="40d351e254d187e1585c515266ae60fb" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="566e1e6f7b0e981ae903bb7163b164b6" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="3a590b50337a2076273050b0df7f9ab4" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="91744f2d3761e84e945d6adf4388e7d3" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="41d79de7f190734fa30f0311b842daf9" key="sap.afm.displayName" value="Data Source">
+    </annotations>
+    <annotations xmi:id="70de76e7f2f94ef400ed676725dc5efb" key="columns" value="[{&quot;name&quot;:&quot;SALESORDERNUMBER&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;ca4e925e523f8d3842376c1ea4889d59&quot;},{&quot;name&quot;:&quot;SERVINGTABLE&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;ad67fde020c298855c0b50ff50d6811b&quot;},{&quot;name&quot;:&quot;BUSINESSPARTNER_1.BUSINESSPARTNERID&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;2ba89ea9f7f1232250336690b6ba3653&quot;},{&quot;name&quot;:&quot;BUSINESSPARTNER_2.BUSINESSPARTNERID&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;25acb6482b7dd067644483c463fe505e&quot;},{&quot;name&quot;:&quot;RECIPE_1.RECIPEID&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;e7cd5fbed5467a2ec24f05e2e42d500f&quot;},{&quot;name&quot;:&quot;SALESORDER_1&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;6e8a379756fb77036530c12bbc8c1853&quot;}]">
+    </annotations>
+    <outputs xmi:id="a978b728330f49fb15eee800a0066dd6" name="DataSource">
+      <attributes xmi:id="ca4e925e523f8d3842376c1ea4889d59" name="SALESORDERNUMBER" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="4817636c3d8f86ff100c9d9d73461f04" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="ad67fde020c298855c0b50ff50d6811b" name="SERVINGTABLE" type="INTEGER" nullable="true" length="10">
+        <annotations xmi:id="afddb6affd17e88bcd55d72b19064280" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="2ba89ea9f7f1232250336690b6ba3653" name="BUSINESSPARTNER_1.BUSINESSPARTNERID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="48d102d8f2dbe5c23ed28f8b3d36531c" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="25acb6482b7dd067644483c463fe505e" name="BUSINESSPARTNER_2.BUSINESSPARTNERID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="371f73eb797f5b898843f90f0112fd92" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e7cd5fbed5467a2ec24f05e2e42d500f" name="RECIPE_1.RECIPEID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="ed6618d94fbec0723ec84259a6224960" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="6e8a379756fb77036530c12bbc8c1853" name="SALESORDER_1" type="BIGINT" nullable="true" length="19">
+      </attributes>
+    </outputs>
+  </nodes>
+  <nodes xmi:id="a20d2d68bcee481467bdd9aaf6f7d3dc" xsi:type="flowgraph:DataNode" name="DataTarget" truncateTable="false" catalogObjectName="openSAP_Model::SALESORDERITEMS" type="DATABASE_TABLE" dataLayout="COLUMN">
+    <annotations key="sap.afm.layout" xmi:id="d9b74710b0600b160664adac90c8f910">
+      <annotations xmi:id="2c2f35daf3897018cd01b3ab448d8630" key="x" value="937">
+      </annotations>
+      <annotations xmi:id="5c87a7cad22604f6f2c184ec7f684c81" key="y" value="-499">
+      </annotations>
+      <annotations xmi:id="9c33b741971be60bd0ea047831190cac" key="width" value="120">
+      </annotations>
+      <annotations xmi:id="176bb7d3495ae4bdc2d6cbc58c221575" key="height" value="115">
+      </annotations>
+    </annotations>
+    <annotations xmi:id="a6260dcb4339d605c8eb9b7945fec439" key="sap.afm.description">
+    </annotations>
+    <annotations xmi:id="334c705219d9b9fdf40e4bd5c8293722" key="sap.afm.nodeType" value="DataNode">
+    </annotations>
+    <annotations xmi:id="516a83d8f9f6acb0f09c91af5b73a88e" key="sap.afm.nodeInputs">
+    </annotations>
+    <annotations xmi:id="1c722cb6e4000aaeb962c7a823096121" key="sap.afm.nodeOutputs">
+    </annotations>
+    <annotations xmi:id="2cdb555c4de7786f55774c89b76cbcf6" key="sap.afm.displayName" value="Data Target">
+    </annotations>
+    <annotations xmi:id="6be1d0f15ef4dc687d233ad1c5647d98" key="columns" value="[{&quot;name&quot;:&quot;SALESORDERNUMBER&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;false&quot;,&quot;primarykey&quot;:true,&quot;id&quot;:&quot;9faf8e9413dbfd942840db0da7456d30&quot;},{&quot;name&quot;:&quot;SERVINGTABLE&quot;,&quot;type&quot;:&quot;INTEGER&quot;,&quot;length&quot;:10,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;58e7fb679d31807b9784c05f0363bab1&quot;},{&quot;name&quot;:&quot;BUSINESSPARTNER_1.BUSINESSPARTNERID&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;ccfbd213b76513d40d4fe4ee29bba82a&quot;},{&quot;name&quot;:&quot;BUSINESSPARTNER_2.BUSINESSPARTNERID&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;e8dc0ed1fde1b78e36adc8d46b1d2461&quot;},{&quot;name&quot;:&quot;SALESORDER_1.ORDERID&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;89b76b41ac400e010e728dc780e18646&quot;},{&quot;name&quot;:&quot;RECIPE_1.RECIPEID&quot;,&quot;type&quot;:&quot;BIGINT&quot;,&quot;length&quot;:19,&quot;nullable&quot;:&quot;true&quot;,&quot;id&quot;:&quot;82ffc8b87e89ca0d2dfbef2be33a3115&quot;}]">
+    </annotations>
+    <inputs xmi:id="c383cea588f9b695753c1d74b43534e9" name="DataTarget" kind="TABLE">
+      <attributes xmi:id="9faf8e9413dbfd942840db0da7456d30" name="SALESORDERNUMBER" type="INTEGER" nullable="false" length="10">
+        <annotations xmi:id="e586e791ce33b6b340b6788c3862b670" key="sap.im.primaryKey" value="true">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="58e7fb679d31807b9784c05f0363bab1" name="SERVINGTABLE" type="INTEGER" nullable="true" length="10">
+        <annotations xmi:id="04c43d3c2722030a7d91adb2b875fa3e" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="ccfbd213b76513d40d4fe4ee29bba82a" name="BUSINESSPARTNER_1.BUSINESSPARTNERID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="4910f4ee7e1702dc44bd9a0373f3dd0b" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="e8dc0ed1fde1b78e36adc8d46b1d2461" name="BUSINESSPARTNER_2.BUSINESSPARTNERID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="934bd5dc31d37bb2c9f323400ca195a1" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="89b76b41ac400e010e728dc780e18646" name="SALESORDER_1.ORDERID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="b6d250fca064c1723fa15ff7435f3e7a" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+      <attributes xmi:id="82ffc8b87e89ca0d2dfbef2be33a3115" name="RECIPE_1.RECIPEID" type="BIGINT" nullable="true" length="19">
+        <annotations xmi:id="af9ea95eeefd24d2bf0323b11f43fbe9" key="sap.im.primaryKey" value="false">
+        </annotations>
+      </attributes>
+    </inputs>
+  </nodes>
+  <tableMappings xmi:id="521767ef31e2ec30296ff9805a79c04a" source="a978b728330f49fb15eee800a0066dd6" target="8dbc5adc7f5e4ee0ba0cd558667d79de">
+    <attributeMappings xmi:id="2cf4e0d6e9e0ae879a80d2f53ab1462c" source="ca4e925e523f8d3842376c1ea4889d59" target="c3c1e2a9d3574724ac6cc4d4b3045dbd">
+    </attributeMappings>
+    <attributeMappings xmi:id="9f16dcd9da7d44e4acb904ad5311b9f1" source="ad67fde020c298855c0b50ff50d6811b" target="64979ebe212c4918a232acd2282fb408">
+    </attributeMappings>
+    <attributeMappings xmi:id="8b8ac49f9e7f2352511cf62ef876dcda" source="6e8a379756fb77036530c12bbc8c1853" target="4bd284b503734ba081d4c98d1c35bb52">
+    </attributeMappings>
+    <attributeMappings xmi:id="6a53ab56a72c40d5b02435abfa0f4f32" source="2ba89ea9f7f1232250336690b6ba3653" target="2809286fb2dee0530413e0033813ae8e">
+    </attributeMappings>
+    <attributeMappings xmi:id="8620dbc92c6de60c9ac125b33d866db9" source="25acb6482b7dd067644483c463fe505e" target="dfb6cad6628713d9435e8ec5597b09fa">
+    </attributeMappings>
+    <attributeMappings xmi:id="db7c31f5c9567d241679f324b4b6bd3f" source="e7cd5fbed5467a2ec24f05e2e42d500f" target="052fbbe56289d4b23f8b9c2857d7f619">
+    </attributeMappings>
+  </tableMappings>
+  <tableMappings xmi:id="a7553e962cacbc733263f7d01d7c403a" source="ca8eaa789906400cad2063c3138cbecc" target="c383cea588f9b695753c1d74b43534e9">
+    <attributeMappings xmi:id="c99b47999942bc7d3a25e2632202365c" source="4a8ba41e290f45fa9910635c2e519174" target="9faf8e9413dbfd942840db0da7456d30">
+    </attributeMappings>
+    <attributeMappings xmi:id="bd03292e661ce7f4b6b6643ef11feb60" source="c4a6b88a11d6460ca2744a2ddf42b9e4" target="58e7fb679d31807b9784c05f0363bab1">
+    </attributeMappings>
+    <attributeMappings xmi:id="276bf0ca1d54a074370529523c4c8c45" source="7d64d25ab18ffefc9f9320e2c9356170" target="ccfbd213b76513d40d4fe4ee29bba82a">
+    </attributeMappings>
+    <attributeMappings xmi:id="7d0926ef6eb27502a1ab5d5800fde115" source="5bbf1e392526312d58fd94414b20bbd2" target="e8dc0ed1fde1b78e36adc8d46b1d2461">
+    </attributeMappings>
+    <attributeMappings xmi:id="ce919c79e2c4e4d1db878b871bb0b269" source="5ddde461e99a56bef38276c5dddfc696" target="82ffc8b87e89ca0d2dfbef2be33a3115">
+    </attributeMappings>
+    <attributeMappings xmi:id="c5d078a7b1c9561b29a7980c8bfc4317" source="b9c0afb4c2fdc7729ef9b3c88d63013f" target="89b76b41ac400e010e728dc780e18646">
+    </attributeMappings>
+  </tableMappings>
+</flowgraph:ContainerNode>
